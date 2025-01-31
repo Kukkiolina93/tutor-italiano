@@ -19,9 +19,10 @@
     </style>
     <script>
         const translations = {
-            it: { title: "Lezioni di Italiano Online per Stranieri", intro: "Impara l'italiano con un tutor esperto!", about: "Chi Sono", aboutText: "Sono un tutor di italiano per stranieri con esperienza online. Offro lezioni personalizzate.", why: "Perché Scegliere Me?", lessons: "Modalità delle Lezioni", lessonsText: "Lezioni online tramite Google Meet. Link fornito prima della sessione.", goals: "Obiettivi", goalsText: "Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.", contact: "Contattami Ora" },
-            en: { title: "Online Italian Lessons for Foreigners", intro: "Learn Italian with an expert tutor!", about: "About Me", aboutText: "I am an experienced Italian tutor offering personalized lessons.", why: "Why Choose Me?", lessons: "Lesson Mode", lessonsText: "Lessons are conducted online via Google Meet. Link provided before each session.", goals: "Goals", goalsText: "Helping you master Italian effectively and engagingly.", contact: "Contact Me Now" },
-            fr: { title: "Cours d'italien en ligne pour étrangers", intro: "Apprenez l'italien avec un tuteur expert!", about: "À propos de moi", aboutText: "Je suis un tuteur expérimenté offrant des cours personnalisés.", why: "Pourquoi me choisir?", lessons: "Mode de cours", lessonsText: "Cours en ligne via Google Meet. Lien fourni avant la session.", goals: "Objectifs", goalsText: "Vous aider à maîtriser l'italien de manière efficace et engageante.", contact: "Contactez-moi maintenant" }
+            it: { title: "Lezioni di Italiano Online per Stranieri", intro: "Impara l'italiano con un tutor esperto!", about: "Chi Sono", aboutText: "Sono un tutor di italiano per stranieri con esperienza online. Offro lezioni personalizzate.", why: "Perché Scegliere Me?", whyList: ["Lezioni su misura per ogni studente", "Materiali didattici inclusi", "Flessibilità negli orari", "Esperienza e passione nell'insegnamento"], lessons: "Modalità delle Lezioni", lessonsText: "Lezioni online tramite Google Meet. Link fornito prima della sessione.", goals: "Obiettivi", goalsText: "Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.", contact: "Contattami Ora" },
+            en: { title: "Online Italian Lessons for Foreigners", intro: "Learn Italian with an expert tutor!", about: "About Me", aboutText: "I am an experienced Italian tutor offering personalized lessons.", why: "Why Choose Me?", whyList: ["Customized lessons for each student", "Learning materials included", "Flexible scheduling", "Passion and experience in teaching"], lessons: "Lesson Mode", lessonsText: "Lessons are conducted online via Google Meet. Link provided before each session.", goals: "Goals", goalsText: "Helping you master Italian effectively and engagingly.", contact: "Contact Me Now" },
+            fr: { title: "Cours d'italien en ligne pour étrangers", intro: "Apprenez l'italien avec un tuteur expert!", about: "À propos de moi", aboutText: "Je suis un tuteur expérimenté offrant des cours personnalisés.", why: "Pourquoi me choisir?", whyList: ["Cours sur mesure pour chaque étudiant", "Matériel pédagogique inclus", "Horaires flexibles", "Expérience et passion dans l'enseignement"], lessons: "Mode de cours", lessonsText: "Cours en ligne via Google Meet. Lien fourni avant la session.", goals: "Objectifs", goalsText: "Vous aider à maîtriser l'italien de manière efficace et engageante.", contact: "Contactez-moi maintenant" },
+            pt: { title: "Aulas de Italiano Online para Estrangeiros", intro: "Aprenda italiano com um tutor experiente!", about: "Sobre mim", aboutText: "Sou um tutor de italiano experiente oferecendo aulas personalizadas.", why: "Por que me escolher?", whyList: ["Aulas personalizadas para cada aluno", "Materiais didáticos incluídos", "Horários flexíveis", "Experiência e paixão pelo ensino"], lessons: "Modo das Aulas", lessonsText: "As aulas são realizadas online via Google Meet. O link é fornecido antes de cada sessão.", goals: "Objetivos", goalsText: "Ajudá-lo a dominar o italiano de forma eficaz e envolvente.", contact: "Entre em contato agora" }
         };
         function changeLanguage(lang) {
             document.getElementById("title").innerText = translations[lang].title;
@@ -34,6 +35,13 @@
             document.getElementById("goals").innerText = translations[lang].goals;
             document.getElementById("goalsText").innerText = translations[lang].goalsText;
             document.getElementById("contact").innerText = translations[lang].contact;
+            let whyList = document.getElementById("whyList");
+            whyList.innerHTML = "";
+            translations[lang].whyList.forEach(item => {
+                let li = document.createElement("li");
+                li.innerText = item;
+                whyList.appendChild(li);
+            });
         }
     </script>
 </head>
@@ -42,6 +50,7 @@
         <button onclick="changeLanguage('it')">IT</button>
         <button onclick="changeLanguage('en')">EN</button>
         <button onclick="changeLanguage('fr')">FR</button>
+        <button onclick="changeLanguage('pt')">PT</button>
     </div>
     <header>
         <h1 id="title">Lezioni di Italiano Online per Stranieri</h1>
@@ -54,24 +63,12 @@
     </section>
     <section>
         <h2 id="why">Perché Scegliere Me?</h2>
-        <ul>
+        <ul id="whyList">
             <li>Lezioni su misura per ogni studente</li>
             <li>Materiali didattici inclusi</li>
             <li>Flessibilità negli orari</li>
             <li>Esperienza e passione nell'insegnamento</li>
         </ul>
-    </section>
-    <section>
-        <h2 id="lessons">Modalità delle Lezioni</h2>
-        <p id="lessonsText">Lezioni online tramite Google Meet. Link fornito prima della sessione.</p>
-    </section>
-    <section>
-        <h2 id="goals">Obiettivi</h2>
-        <p id="goalsText">Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.</p>
-    </section>
-    <section class="cta">
-        <h2 id="contact">Prenota la tua prima lezione!</h2>
-        <a href="mailto:kellymiotto.urhired@gmail.com">Contattami Ora</a>
     </section>
 </body>
 </html>
