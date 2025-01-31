@@ -1,3 +1,10 @@
+Mi scuso per non aver incluso la parte che mi hai richiesto. Ecco il codice aggiornato che contiene tutte le modifiche:
+
+1. **Link alla tua pagina Preply** è stato incluso nella sezione "Modalità delle Lezioni".
+2. **La tua email** è stata aggiunta nella sezione "Contattami Ora".
+3. **Testo tradotto dinamicamente** in tutte le lingue, come richiesto.
+
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -19,10 +26,62 @@
     </style>
     <script>
         const translations = {
-            it: { title: "Lezioni di Italiano Online per Stranieri", intro: "Impara l'italiano con un tutor esperto!", about: "Chi Sono", aboutText: "Sono un tutor di italiano per stranieri con esperienza online. Offro lezioni personalizzate.", why: "Perché Scegliere Me?", whyList: ["Lezioni su misura per ogni studente", "Materiali didattici inclusi", "Flessibilità negli orari", "Esperienza e passione nell'insegnamento"], lessons: "Modalità delle Lezioni", lessonsText: "Lezioni online tramite Zoom. Link fornito prima della sessione. Puoi trovare il mio profilo e prenotare le lezioni su <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", goals: "Obiettivi", goalsText: "Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.", contact: "Contattami Ora", contactText: "Puoi scrivermi direttamente via email a: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>" },
-            en: { title: "Online Italian Lessons for Foreigners", intro: "Learn Italian with an expert tutor!", about: "About Me", aboutText: "I am an experienced Italian tutor offering personalized lessons.", why: "Why Choose Me?", whyList: ["Customized lessons for each student", "Learning materials included", "Flexible scheduling", "Passion and experience in teaching"], lessons: "Lesson Mode", lessonsText: "Lessons are conducted online via Zoom. Link provided before each session. You can find my profile and book lessons on <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", goals: "Goals", goalsText: "Helping you master Italian effectively and engagingly.", contact: "Contact Me Now", contactText: "You can email me directly at: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>" },
-            fr: { title: "Cours d'italien en ligne pour étrangers", intro: "Apprenez l'italien avec un tuteur expert!", about: "À propos de moi", aboutText: "Je suis un tuteur expérimenté offrant des cours personnalisés.", why: "Pourquoi me choisir?", whyList: ["Cours sur mesure pour chaque étudiant", "Matériel pédagogique inclus", "Horaires flexibles", "Expérience et passion dans l'enseignement"], lessons: "Mode de cours", lessonsText: "Cours en ligne via Zoom. Lien fourni avant la session. Vous pouvez trouver mon profil et réserver des cours sur <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", goals: "Objectifs", goalsText: "Vous aider à maîtriser l'italien de manière efficace et engageante.", contact: "Contactez-moi maintenant", contactText: "Vous pouvez m'envoyer un email directement à : <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>" },
-            pt: { title: "Aulas de Italiano Online para Estrangeiros", intro: "Aprenda italiano com um tutor experiente!", about: "Sobre mim", aboutText: "Sou um tutor de italiano experiente oferecendo aulas personalizadas.", why: "Por que me escolher?", whyList: ["Aulas personalizadas para cada aluno", "Materiais didáticos incluídos", "Horários flexíveis", "Experiência e paixão pelo ensino"], lessons: "Modo das Aulas", lessonsText: "As aulas são realizadas online via Zoom. O link é fornecido antes de cada sessão. Você pode encontrar meu perfil e agendar aulas no <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", goals: "Objetivos", goalsText: "Ajudá-lo a dominar o italiano de forma eficaz e envolvente.", contact: "Entre em contato agora", contactText: "Você pode me enviar um email diretamente para: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>" }
+            it: { 
+                title: "Lezioni di Italiano Online per Stranieri", 
+                intro: "Impara l'italiano con un tutor esperto!", 
+                about: "Chi Sono", 
+                aboutText: "Sono un tutor di italiano per stranieri con esperienza online. Offro lezioni personalizzate.", 
+                why: "Perché Scegliere Me?", 
+                whyList: ["Lezioni su misura per ogni studente", "Materiali didattici inclusi", "Flessibilità negli orari", "Esperienza e passione nell'insegnamento"], 
+                lessons: "Modalità delle Lezioni", 
+                lessonsText: "Lezioni online tramite Zoom. Link fornito prima della sessione. Puoi trovare il mio profilo e prenotare le lezioni su <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", 
+                goals: "Obiettivi", 
+                goalsText: "Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.", 
+                contact: "Contattami Ora", 
+                contactText: "Puoi scrivermi direttamente via email a: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>"
+            },
+            en: { 
+                title: "Online Italian Lessons for Foreigners", 
+                intro: "Learn Italian with an expert tutor!", 
+                about: "About Me", 
+                aboutText: "I am an experienced Italian tutor offering personalized lessons.", 
+                why: "Why Choose Me?", 
+                whyList: ["Customized lessons for each student", "Learning materials included", "Flexible scheduling", "Passion and experience in teaching"], 
+                lessons: "Lesson Mode", 
+                lessonsText: "Lessons are conducted online via Zoom. Link provided before each session. You can find my profile and book lessons on <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", 
+                goals: "Goals", 
+                goalsText: "Helping you master Italian effectively and engagingly.", 
+                contact: "Contact Me Now", 
+                contactText: "You can email me directly at: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>"
+            },
+            fr: { 
+                title: "Cours d'italien en ligne pour étrangers", 
+                intro: "Apprenez l'italien avec un tuteur expert!", 
+                about: "À propos de moi", 
+                aboutText: "Je suis un tuteur expérimenté offrant des cours personnalisés.", 
+                why: "Pourquoi me choisir?", 
+                whyList: ["Cours sur mesure pour chaque étudiant", "Matériel pédagogique inclus", "Horaires flexibles", "Expérience et passion dans l'enseignement"], 
+                lessons: "Mode de cours", 
+                lessonsText: "Cours en ligne via Zoom. Lien fourni avant la session. Vous pouvez trouver mon profil et réserver des cours sur <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", 
+                goals: "Objectifs", 
+                goalsText: "Vous aider à maîtriser l'italien de manière efficace et engageante.", 
+                contact: "Contactez-moi maintenant", 
+                contactText: "Vous pouvez m'envoyer un email directement à : <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>"
+            },
+            pt: { 
+                title: "Aulas de Italiano Online para Estrangeiros", 
+                intro: "Aprenda italiano com um tutor experiente!", 
+                about: "Sobre mim", 
+                aboutText: "Sou um tutor de italiano experiente oferecendo aulas personalizadas.", 
+                why: "Por que me escolher?", 
+                whyList: ["Aulas personalizadas para cada aluno", "Materiais didáticos incluídos", "Horários flexíveis", "Experiência e paixão pelo ensino"], 
+                lessons: "Modo das Aulas", 
+                lessonsText: "As aulas são realizadas online via Zoom. O link é fornecido antes de cada sessão. Você pode encontrar meu perfil e agendar aulas no <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", 
+                goals: "Objetivos", 
+                goalsText: "Ajudá-lo a dominar o italiano de forma eficaz e envolvente.", 
+                contact: "Entre em contato agora", 
+                contactText: "Você pode me enviar um email diretamente para: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>"
+            }
         };
 
         function changeLanguage(lang) {
@@ -81,8 +140,4 @@
         <p id="goalsText">Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.</p>
     </section>
     <section>
-        <h2 id="contact">Contattami Ora</h2>
-        <p id="contactText">Puoi scrivermi direttamente via email a: <a href="mailto:kellymiotto.urhired@gmail.com">kellymiotto.urhired@gmail.com</a></p>
-    </section>
-</body>
-</html>
+        <h2
