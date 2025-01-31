@@ -13,20 +13,79 @@
         .cta a { background: #0073e6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
         .cta a:hover { background: #005bb5; }
         .profile-img { display: block; margin: 0 auto; border-radius: 50%; width: 150px; height: 150px; object-fit: cover; }
+        .language-selector { text-align: center; margin: 20px; }
     </style>
+    <script>
+        const translations = {
+            it: {
+                title: "Lezioni di Italiano Online per Stranieri",
+                intro: "Impara l'italiano con un tutor esperto, ovunque tu sia!",
+                about: "Chi Sono",
+                aboutText: "Sono un tutor di italiano per stranieri con esperienza nell'insegnamento online. Offro lezioni personalizzate per ogni livello.",
+                why: "Perché Scegliere Me?",
+                lessons: "Modalità delle Lezioni",
+                lessonsText: "Le lezioni si svolgono online tramite Google Meet. Il link per la lezione verrà fornito prima di ogni sessione.",
+                goals: "Obiettivi",
+                goalsText: "Il mio obiettivo è aiutarti a raggiungere la padronanza della lingua italiana in modo efficace e coinvolgente, migliorando la tua comunicazione e fiducia.",
+                contact: "Contattami Ora"
+            },
+            en: {
+                title: "Online Italian Lessons for Foreigners",
+                intro: "Learn Italian with an expert tutor, wherever you are!",
+                about: "About Me",
+                aboutText: "I am an Italian tutor for foreigners with experience in online teaching. I offer personalized lessons for every level.",
+                why: "Why Choose Me?",
+                lessons: "Lesson Mode",
+                lessonsText: "Lessons are conducted online via Google Meet. The link for the lesson will be provided before each session.",
+                goals: "Goals",
+                goalsText: "My goal is to help you achieve fluency in Italian effectively and engagingly, improving your communication and confidence.",
+                contact: "Contact Me Now"
+            },
+            fr: {
+                title: "Cours d'italien en ligne pour étrangers",
+                intro: "Apprenez l'italien avec un tuteur expert, où que vous soyez!",
+                about: "À propos de moi",
+                aboutText: "Je suis un tuteur d'italien pour étrangers avec de l'expérience dans l'enseignement en ligne. Je propose des cours personnalisés pour tous les niveaux.",
+                why: "Pourquoi me choisir?",
+                lessons: "Mode de cours",
+                lessonsText: "Les cours se déroulent en ligne via Google Meet. Le lien pour le cours sera fourni avant chaque session.",
+                goals: "Objectifs",
+                goalsText: "Mon objectif est de vous aider à maîtriser la langue italienne de manière efficace et engageante, en améliorant votre communication et votre confiance.",
+                contact: "Contactez-moi maintenant"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById("title").innerText = translations[lang].title;
+            document.getElementById("intro").innerText = translations[lang].intro;
+            document.getElementById("about").innerText = translations[lang].about;
+            document.getElementById("aboutText").innerText = translations[lang].aboutText;
+            document.getElementById("why").innerText = translations[lang].why;
+            document.getElementById("lessons").innerText = translations[lang].lessons;
+            document.getElementById("lessonsText").innerText = translations[lang].lessonsText;
+            document.getElementById("goals").innerText = translations[lang].goals;
+            document.getElementById("goalsText").innerText = translations[lang].goalsText;
+            document.getElementById("contact").innerText = translations[lang].contact;
+        }
+    </script>
 </head>
 <body>
+    <div class="language-selector">
+        <button onclick="changeLanguage('it')">IT</button>
+        <button onclick="changeLanguage('en')">EN</button>
+        <button onclick="changeLanguage('fr')">FR</button>
+    </div>
     <header>
-        <h1>Lezioni di Italiano Online per Stranieri</h1>
-        <p>Impara l'italiano con un tutor esperto, ovunque tu sia!</p>
+        <h1 id="title">Lezioni di Italiano Online per Stranieri</h1>
+        <p id="intro">Impara l'italiano con un tutor esperto, ovunque tu sia!</p>
     </header>
     <section>
-        <h2>Chi Sono</h2>
+        <h2 id="about">Chi Sono</h2>
         <img src="https://raw.githubusercontent.com/Kukkiolina93/tutor-italiano/main/Kelly%20Miotto.jpg" alt="Foto di Kelly Miotto" class="profile-img">
-        <p>Sono un tutor di italiano per stranieri con esperienza nell'insegnamento online. Offro lezioni personalizzate per ogni livello.</p>
+        <p id="aboutText">Sono un tutor di italiano per stranieri con esperienza nell'insegnamento online. Offro lezioni personalizzate per ogni livello.</p>
     </section>
     <section>
-        <h2>Perché Scegliere Me?</h2>
+        <h2 id="why">Perché Scegliere Me?</h2>
         <ul>
             <li>Lezioni su misura per ogni studente</li>
             <li>Materiali didattici inclusi</li>
@@ -35,22 +94,16 @@
         </ul>
     </section>
     <section>
-        <h2>Modalità delle Lezioni</h2>
-        <p>Le lezioni si svolgono online tramite Zoom. Il link per la lezione verrà fornito prima di ogni sessione.</p>
+        <h2 id="lessons">Modalità delle Lezioni</h2>
+        <p id="lessonsText">Le lezioni si svolgono online tramite Google Meet. Il link per la lezione verrà fornito prima di ogni sessione.</p>
     </section>
     <section>
-        <h2>Obiettivi</h2>
-        <p>Il mio obiettivo è aiutarti a raggiungere la padronanza della lingua italiana in modo efficace e coinvolgente, migliorando la tua comunicazione e fiducia.</p>
-        <img src="Learning.jpg" alt="Studente che apprende l'italiano" style="width:100%; border-radius:5px;">
+        <h2 id="goals">Obiettivi</h2>
+        <p id="goalsText">Il mio obiettivo è aiutarti a raggiungere la padronanza della lingua italiana in modo efficace e coinvolgente, migliorando la tua comunicazione e fiducia.</p>
     </section>
     <section class="cta">
-        <h2>Prenota la tua prima lezione!</h2>
+        <h2 id="contact">Prenota la tua prima lezione!</h2>
         <a href="mailto:kellymiotto.urhired@gmail.com">Contattami Ora</a>
-    </section>
-    <section>
-        <h2>Contatti</h2>
-        <p>Email: <a href="mailto:kellymiotto.urhired@gmail.com">kellymiotto.urhired@gmail.com</a></p>
-        <p>Profilo Preply: <a href="https://preply.com/en/tutor/4558801" target="_blank">Visita la mia pagina</a></p>
     </section>
 </body>
 </html>
