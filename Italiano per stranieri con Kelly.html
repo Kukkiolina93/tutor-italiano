@@ -5,56 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Italiano per Stranieri - Lezioni Online</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #0073e6; color: #fff; padding: 20px; text-align: center; }
-        section { max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        h1, h2 { color: #333; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f0f8ff; color: #333; }
+        header { background: #004080; color: #fff; padding: 30px; text-align: center; font-size: 1.5em; }
+        section { max-width: 900px; margin: 30px auto; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+        h1, h2 { color: #004080; }
         .cta { text-align: center; margin-top: 20px; }
-        .cta a { background: #0073e6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-        .cta a:hover { background: #005bb5; }
-        .profile-img { display: block; margin: 0 auto; border-radius: 50%; width: 150px; height: 150px; object-fit: cover; }
+        .cta a { background: #ff6600; color: white; padding: 15px 25px; text-decoration: none; border-radius: 10px; font-size: 1.2em; }
+        .cta a:hover { background: #cc5200; }
+        .profile-img { display: block; margin: 20px auto; border-radius: 50%; width: 180px; height: 180px; object-fit: cover; border: 5px solid #004080; }
         .language-selector { text-align: center; margin: 20px; }
+        .language-selector button { background: #004080; color: #fff; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer; font-size: 1em; }
+        .language-selector button:hover { background: #00264d; }
     </style>
     <script>
         const translations = {
-            it: {
-                title: "Lezioni di Italiano Online per Stranieri",
-                intro: "Impara l'italiano con un tutor esperto, ovunque tu sia!",
-                about: "Chi Sono",
-                aboutText: "Sono un tutor di italiano per stranieri con esperienza nell'insegnamento online. Offro lezioni personalizzate per ogni livello.",
-                why: "Perché Scegliere Me?",
-                lessons: "Modalità delle Lezioni",
-                lessonsText: "Le lezioni si svolgono online tramite Google Meet. Il link per la lezione verrà fornito prima di ogni sessione.",
-                goals: "Obiettivi",
-                goalsText: "Il mio obiettivo è aiutarti a raggiungere la padronanza della lingua italiana in modo efficace e coinvolgente, migliorando la tua comunicazione e fiducia.",
-                contact: "Contattami Ora"
-            },
-            en: {
-                title: "Online Italian Lessons for Foreigners",
-                intro: "Learn Italian with an expert tutor, wherever you are!",
-                about: "About Me",
-                aboutText: "I am an Italian tutor for foreigners with experience in online teaching. I offer personalized lessons for every level.",
-                why: "Why Choose Me?",
-                lessons: "Lesson Mode",
-                lessonsText: "Lessons are conducted online via Google Meet. The link for the lesson will be provided before each session.",
-                goals: "Goals",
-                goalsText: "My goal is to help you achieve fluency in Italian effectively and engagingly, improving your communication and confidence.",
-                contact: "Contact Me Now"
-            },
-            fr: {
-                title: "Cours d'italien en ligne pour étrangers",
-                intro: "Apprenez l'italien avec un tuteur expert, où que vous soyez!",
-                about: "À propos de moi",
-                aboutText: "Je suis un tuteur d'italien pour étrangers avec de l'expérience dans l'enseignement en ligne. Je propose des cours personnalisés pour tous les niveaux.",
-                why: "Pourquoi me choisir?",
-                lessons: "Mode de cours",
-                lessonsText: "Les cours se déroulent en ligne via Google Meet. Le lien pour le cours sera fourni avant chaque session.",
-                goals: "Objectifs",
-                goalsText: "Mon objectif est de vous aider à maîtriser la langue italienne de manière efficace et engageante, en améliorant votre communication et votre confiance.",
-                contact: "Contactez-moi maintenant"
-            }
+            it: { title: "Lezioni di Italiano Online per Stranieri", intro: "Impara l'italiano con un tutor esperto!", about: "Chi Sono", aboutText: "Sono un tutor di italiano per stranieri con esperienza online. Offro lezioni personalizzate.", why: "Perché Scegliere Me?", lessons: "Modalità delle Lezioni", lessonsText: "Lezioni online tramite Google Meet. Link fornito prima della sessione.", goals: "Obiettivi", goalsText: "Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.", contact: "Contattami Ora" },
+            en: { title: "Online Italian Lessons for Foreigners", intro: "Learn Italian with an expert tutor!", about: "About Me", aboutText: "I am an experienced Italian tutor offering personalized lessons.", why: "Why Choose Me?", lessons: "Lesson Mode", lessonsText: "Lessons are conducted online via Google Meet. Link provided before each session.", goals: "Goals", goalsText: "Helping you master Italian effectively and engagingly.", contact: "Contact Me Now" },
+            fr: { title: "Cours d'italien en ligne pour étrangers", intro: "Apprenez l'italien avec un tuteur expert!", about: "À propos de moi", aboutText: "Je suis un tuteur expérimenté offrant des cours personnalisés.", why: "Pourquoi me choisir?", lessons: "Mode de cours", lessonsText: "Cours en ligne via Google Meet. Lien fourni avant la session.", goals: "Objectifs", goalsText: "Vous aider à maîtriser l'italien de manière efficace et engageante.", contact: "Contactez-moi maintenant" }
         };
-
         function changeLanguage(lang) {
             document.getElementById("title").innerText = translations[lang].title;
             document.getElementById("intro").innerText = translations[lang].intro;
@@ -77,12 +45,12 @@
     </div>
     <header>
         <h1 id="title">Lezioni di Italiano Online per Stranieri</h1>
-        <p id="intro">Impara l'italiano con un tutor esperto, ovunque tu sia!</p>
+        <p id="intro">Impara l'italiano con un tutor esperto!</p>
     </header>
     <section>
         <h2 id="about">Chi Sono</h2>
         <img src="https://raw.githubusercontent.com/Kukkiolina93/tutor-italiano/main/Kelly%20Miotto.jpg" alt="Foto di Kelly Miotto" class="profile-img">
-        <p id="aboutText">Sono un tutor di italiano per stranieri con esperienza nell'insegnamento online. Offro lezioni personalizzate per ogni livello.</p>
+        <p id="aboutText">Sono un tutor di italiano per stranieri con esperienza online. Offro lezioni personalizzate.</p>
     </section>
     <section>
         <h2 id="why">Perché Scegliere Me?</h2>
@@ -95,11 +63,11 @@
     </section>
     <section>
         <h2 id="lessons">Modalità delle Lezioni</h2>
-        <p id="lessonsText">Le lezioni si svolgono online tramite Google Meet. Il link per la lezione verrà fornito prima di ogni sessione.</p>
+        <p id="lessonsText">Lezioni online tramite Google Meet. Link fornito prima della sessione.</p>
     </section>
     <section>
         <h2 id="goals">Obiettivi</h2>
-        <p id="goalsText">Il mio obiettivo è aiutarti a raggiungere la padronanza della lingua italiana in modo efficace e coinvolgente, migliorando la tua comunicazione e fiducia.</p>
+        <p id="goalsText">Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.</p>
     </section>
     <section class="cta">
         <h2 id="contact">Prenota la tua prima lezione!</h2>
