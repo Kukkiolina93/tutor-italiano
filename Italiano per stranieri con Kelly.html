@@ -12,53 +12,55 @@
             padding: 0;
             background-color: #f3f6f9;
             color: #333;
-            font-size: 14px; /* Ridotto il font-size per il corpo */
+            font-size: 14px; /* Dimensione globale ridotta */
         }
         header {
             background: linear-gradient(135deg, #004080, #0099cc);
             color: white;
-            padding: 20px 10px; /* Ridotto padding */
+            padding: 20px 15px; /* Ridotto il padding */
             text-align: center;
-            font-size: 1.5em; /* Font-size più compatto */
-            border-bottom: 3px solid #ff6600;
+            font-size: 1.5em; /* Ridotto il font-size */
+            border-bottom: 4px solid #ff6600;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             font-weight: 600;
             letter-spacing: 0.5px;
-            font-size: 1.5em;
         }
         header p {
-            font-size: 1em;
+            font-size: 1.1em;
             margin-top: 5px;
         }
         section {
-            max-width: 900px; /* Ridotto la larghezza */
-            margin: 40px auto; /* Ridotto margine verticale */
-            padding: 30px 20px; /* Ridotto padding */
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px 25px; /* Ridotto padding */
             background: white;
-            border-radius: 10px; /* Angoli arrotondati più stretti */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+            line-height: 1.6;
         }
         section h2 {
             color: #004080;
-            font-size: 1.8em; /* Ridotto font-size */
-            margin-bottom: 20px;
+            font-size: 1.8em;
+            margin-bottom: 20px; /* Ridotto il margine inferiore */
+            font-weight: 600;
         }
         p, ul {
-            margin: 15px 0; /* Ridotto margine */
+            margin: 15px 0;
         }
         .cta {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 30px; /* Ridotto il margine */
         }
         .cta a {
             background: #ff6600;
             color: white;
-            padding: 12px 30px; /* Ridotto padding */
+            padding: 12px 28px;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.2em; /* Ridotto font-size */
+            font-size: 1.1em; /* Ridotto il font-size */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s, transform 0.3s;
         }
@@ -71,23 +73,23 @@
         }
         .profile-img {
             display: block;
-            margin: 20px auto; /* Ridotto margine */
+            margin: 30px auto;
             border-radius: 50%;
-            width: 180px; /* Ridotto dimensione */
-            height: 180px; /* Ridotto dimensione */
+            width: 180px; /* Ridotto il diametro */
+            height: 180px;
             object-fit: cover;
-            border: 4px solid #004080;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 6px solid #004080;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .language-selector {
             text-align: center;
-            margin: 30px 0;
+            margin: 20px;
         }
         .language-selector button {
             background: #004080;
             color: white;
             border: none;
-            padding: 12px 30px; /* Ridotto padding */
+            padding: 12px 28px; /* Ridotto padding */
             margin: 5px;
             border-radius: 50px;
             cursor: pointer;
@@ -108,7 +110,7 @@
         }
         ul li {
             margin: 10px 0;
-            font-size: 1.1em;
+            font-size: 1em;
             color: #555;
         }
         footer {
@@ -116,8 +118,8 @@
             color: #555;
             text-align: center;
             padding: 20px;
-            margin-top: 40px; /* Ridotto margine */
-            font-size: 0.95em;
+            margin-top: 40px;
+            font-size: 0.9em;
             border-top: 2px solid #ddd;
         }
         footer a {
@@ -180,68 +182,77 @@
                 why: "Por que me escolher?", 
                 whyList: ["Aulas personalizadas para cada aluno", "Materiais didáticos incluídos", "Horários flexíveis", "Experiência e paixão pelo ensino"], 
                 lessons: "Modo das Aulas", 
-                lessonsText: "As aulas são realizadas online via Zoom. O link é fornecido antes de cada sessão. Você pode encontrar mais informações sobre mim neste link: <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", 
+                lessonsText: "As aulas são realizadas online via Zoom. O link é fornecido antes de cada sessão. Você pode encontrar mais informações sobre mim no seguinte link: <a href='https://preply.com/en/tutor/4558801' target='_blank'>Preply</a>.", 
                 goals: "Objetivos", 
-                goalsText: "Ajudar você a dominar o italiano de forma eficaz e envolvente.", 
+                goalsText: "Ajudá-lo a dominar o italiano de forma eficaz e envolvente.", 
                 contact: "Entre em contato agora", 
-                contactText: "Você pode me enviar um e-mail diretamente para: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>"
+                contactText: "Você pode me enviar um email diretamente para: <a href='mailto:kellymiotto.urhired@gmail.com'>kellymiotto.urhired@gmail.com</a>"
             }
         };
 
         function changeLanguage(lang) {
-            document.title = translations[lang].title;
-            document.querySelector('header h1').innerText = translations[lang].title;
-            document.querySelector('header p').innerText = translations[lang].intro;
-            document.querySelector('section h2:nth-of-type(1)').innerText = translations[lang].about;
-            document.querySelector('section p:nth-of-type(1)').innerHTML = translations[lang].aboutText;
-            document.querySelector('section h2:nth-of-type(2)').innerText = translations[lang].why;
-            const whyList = document.querySelector('section ul');
-            whyList.innerHTML = '';
+            document.getElementById("title").innerText = translations[lang].title;
+            document.getElementById("intro").innerText = translations[lang].intro;
+            document.getElementById("about").innerText = translations[lang].about;
+            document.getElementById("aboutText").innerText = translations[lang].aboutText;
+            document.getElementById("why").innerText = translations[lang].why;
+            document.getElementById("lessons").innerText = translations[lang].lessons;
+            document.getElementById("lessonsText").innerHTML = translations[lang].lessonsText;
+            document.getElementById("goals").innerText = translations[lang].goals;
+            document.getElementById("goalsText").innerText = translations[lang].goalsText;
+            document.getElementById("contact").innerText = translations[lang].contact;
+            document.getElementById("contactText").innerHTML = translations[lang].contactText;
+            let whyList = document.getElementById("whyList");
+            whyList.innerHTML = "";
             translations[lang].whyList.forEach(item => {
-                const li = document.createElement('li');
+                let li = document.createElement("li");
                 li.innerText = item;
                 whyList.appendChild(li);
             });
-            document.querySelector('section h2:nth-of-type(3)').innerText = translations[lang].lessons;
-            document.querySelector('section p:nth-of-type(2)').innerHTML = translations[lang].lessonsText;
-            document.querySelector('section h2:nth-of-type(4)').innerText = translations[lang].goals;
-            document.querySelector('section p:nth-of-type(3)').innerHTML = translations[lang].goalsText;
-            document.querySelector('.cta a').innerText = translations[lang].contact;
-            document.querySelector('.cta a').href = translations[lang].contactText;
         }
     </script>
 </head>
 <body>
+    <div class="language-selector">
+        <button onclick="changeLanguage('it')">IT</button>
+        <button onclick="changeLanguage('en')">EN</button>
+        <button onclick="changeLanguage('fr')">FR</button>
+        <button onclick="changeLanguage('pt')">PT</button>
+    </div>
     <header>
-        <h1>Lezioni di Italiano Online per Stranieri</h1>
-        <p>Impara l'italiano con un tutor esperto!</p>
+        <h1 id="title">Lezioni di Italiano Online per Stranieri</h1>
+        <p id="intro">Impara l'italiano con un tutor esperto!</p>
     </header>
     <section>
-        <h2>Chi Sono</h2>
-        <p>Ciao! Mi chiamo Kelly e sono una tutor di italiano per stranieri. Offro lezioni personalizzate, adattate alle tue necessità...</p>
-        <h2>Perché Scegliere Me?</h2>
-        <ul>
+        <h2 id="about">Chi Sono</h2>
+        <img src="https://raw.githubusercontent.com/Kukkiolina93/tutor-italiano/main/Kelly%20Miotto.jpg" alt="Foto di Kelly" class="profile-img">
+        <p id="aboutText">Ciao! Mi chiamo Kelly e sono una tutor di italiano per stranieri. Offro lezioni personalizzate, adattate alle tue necessità, che ti permetteranno di imparare in modo efficace e divertente. Con esperienza, aiuto studenti di ogni livello a raggiungere i loro obiettivi linguistici o acquisire una maggiore comprensione della cultura italiana.</p>
+    </section>
+    <section>
+        <h2 id="why">Perché Scegliere Me?</h2>
+        <ul id="whyList">
             <li>Lezioni su misura per ogni studente</li>
             <li>Materiali didattici inclusi</li>
             <li>Flessibilità negli orari</li>
             <li>Esperienza e passione nell'insegnamento</li>
         </ul>
-        <h2>Modalità delle Lezioni</h2>
-        <p>Lezioni online tramite Zoom. Link fornito prima della sessione...</p>
-        <h2>Obiettivi</h2>
-        <p>Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.</p>
-        <div class="cta">
-            <a href="mailto:kellymiotto.urhired@gmail.com">Contattami Ora</a>
-        </div>
+    </section>
+    <section>
+        <h2 id="lessons">Modalità delle Lezioni</h2>
+        <p id="lessonsText">Lezioni online tramite Zoom. Link fornito prima della sessione. Puoi trovare ulteriori informazioni su di me su
+
+ <a href="https://preply.com/en/tutor/4558801" target="_blank">Preply</a>.</p>
+    </section>
+    <section>
+        <h2 id="goals">Obiettivi</h2>
+        <p id="goalsText">Aiutarti a padroneggiare l'italiano in modo efficace e coinvolgente.</p>
+    </section>
+    <section class="cta">
+        <h2 id="contact">Contattami Ora</h2>
+        <p id="contactText">Puoi scrivermi direttamente via email a: <a href="mailto:kellymiotto.urhired@gmail.com">kellymiotto.urhired@gmail.com</a></p>
     </section>
     <footer>
-        <p>© 2025 Lezioni di Italiano Online. Tutti i diritti riservati.</p>
+        <p>&copy; 2025 Kelly Miotto. <a href="https://preply.com/en/tutor/4558801" target="_blank">Scopri di più su di me su Preply.</a></p>
     </footer>
-    <div class="language-selector">
-        <button onclick="changeLanguage('it')">Italiano</button>
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('fr')">Français</button>
-        <button onclick="changeLanguage('pt')">Português</button>
-    </div>
 </body>
 </html>
